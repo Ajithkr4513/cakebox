@@ -1,0 +1,58 @@
+register
+  url:'http://127.0.0.1:8000/api/register/'
+  method:post
+  data:username,email,password
+
+
+token
+  url:'http://127.0.0.1:8000/api/token/'
+    method:post
+    data:username,password
+
+
+cakelist(along with reviews)
+
+  url:'http://127.0.0.1:8000/api/cakes/'
+  method:get
+  authentication= Token authentication
+
+cake detial
+
+  url:'http://127.0.0.1:8000/api/cakes/:id/'
+  method:get
+  authentication= Token authentication
+
+
+add to cart
+
+    url:'http://127.0.0.1:8000/api/cakes/:id/add_to_cart/'
+    method:post
+    authentication= Token authentication
+
+cartlist
+
+    url:'http://127.0.0.1:8000/api/cart/'
+    method:get
+    authentication= Token authentication
+
+place order
+
+    url:'http://127.0.0.1:8000/api/cakes/:id/place_order/'
+    method:post
+    authentication= Token authentication
+    data:address,matter
+
+list order
+
+    url:'http://127.0.0.1:8000/api/orders/'
+    method:get
+    authentication= Token authentication
+
+
+add review
+
+    url:'http://127.0.0.1:8000/api/cakes/:id/add_review/'
+    method:post
+    authentication= Token authentication
+    data:comment,rating
+
